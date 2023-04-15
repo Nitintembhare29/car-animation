@@ -1,0 +1,85 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    overflow: hidden;  /*  it will stop overflow */
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url(./img&Sound/background.jpg);
+    background-repeat: no-repeat;  /*background will not repeat in any direction */
+}
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./img&Sound/trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -144px;
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(./img&Sound/track.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+    background-repeat: no-repeat;
+    animation: trackMove linear 8s infinite;
+}
+.car{
+    height: 100px;
+    width: 320px;
+    background-image: url(./img&Sound/car_body.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 440px;   /*car image slide by 440px from left */
+    bottom: 65px;
+    animation: shake linear 1s infinite;
+}
+
+.wheel1 img{
+    width: 66px;
+    position: relative;
+    top: 40px;
+    left: 41px;
+    animation: wheelRotation linear .4s infinite;
+}
+.wheel2 img{
+    width: 63px;
+    position: relative;
+    top: -29px;
+    left: 221px;
+    animation: wheelRotation linear .4s infinite;
+}
+/* @keyframes is used to make animation*/
+@keyframes wheelRotation {
+    /* as it reches to 100% rotate by 360 deg */
+    100%{
+        transform: rotate(360deg);
+    }  
+}
+
+@keyframes trackMove {
+    
+    100%{
+        transform: translateX(-550vw);
+    }  
+}
+@keyframes shake{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
